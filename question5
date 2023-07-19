@@ -1,0 +1,41 @@
+package question5;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author hp
+ */
+public class QUESTION5 {
+        public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the full name of the student: ");
+        String fullName = input.nextLine();
+
+        System.out.print("Enter the score: ");
+        int score = input.nextInt();
+
+        char grade;
+        if (score >= 70) {
+            grade = 'A';
+        } else if (score >= 60) {
+            grade = 'B';
+        } else if (score >= 50) {
+            grade = 'C';
+        } else if (score >= 40) {
+            grade = 'D';
+        } else if (score < 40 && score >= 0) {
+            grade = 'F';
+        } else {
+            System.out.println("Invalid score entered.");
+            input.close();
+            return;
+        }
+
+        System.out.println("Student's full name: " + fullName);
+        System.out.println("Grade: " + grade);
+
+        input.close();
+    }
+}
